@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "orientation": "any",
+  "start_url": "index.html",
+  "name": "The Spoken Word",
+  "short_name": "The Spoken Word",
+  "version": "com.thespokenword.thespokenword",
+  "description": "The Spoken Word Ebook App.",
+  "author": "Zuriel Ann Murphy",
+  "icons": []
+}

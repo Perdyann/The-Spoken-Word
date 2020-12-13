@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+		<!-- STYLES -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"> 
+		<link rel="stylesheet" href="css/font-awesome.min.css">    
+		<link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>THE SPOKEN WORD</title>
+    </head>
+    <body>
+		<!-- MENU PAGES -->
+		<nav id="menu" class="menu"> 
+		  <section class="menu-section">
+			<h3 class="menu-section-title">The Spoken Word - 365 Days of Rhema</h3>
+			<ul id="menu-list" class="menu-section-list">
+				<li><a href="#/">HOME</a></li><br/>
+				<li><a href="#/january">JANUARY</a></li>
+				<li><a href="#/february">FEBRUARY</a></li>
+				<li><a href="#/march">MARCH</a></li>
+				<li><a href="#/ave">APRIL</a></li>
+				<li><a href="#/may">MAY</a></li>
+				<li><a href="#/june">JUNE</a></li>
+				<li><a href="#/july">JULY</a></li>
+				<li><a href="#/august">AUGUST</a></li>
+				<li><a href="#/september">SEPTEMBER</a></li>
+				<li><a href="#/october">OCTOBER</a></li>
+				<li><a href="#/november">NOVEMBER</a></li>
+				<li><a href="#/december">DECEMBER</a></li>
+			</ul>
+		  </section>
+		</nav> 
+		
+		<div id="panel">  
+			<!-- HEADING -->
+			<div id="header-bar">    
+				THE SPOKEN WORD
+				<button id="main-button" class="btn btn-default" type="button">        
+					<i class="fa fa-bars" aria-hidden="true"></i>        
+				</button>	
+			</div> 
+			
+			<!-- CONTENT RENDERED BY ANGULARJS -->
+			<div id="ebook-wrapper"> 
+				<div id="ebook-content" ng-view></div>    
+			</div> 
+		</div>
+		
+		<!--  REQUIRED SCRIPTS -->
+        <script type="text/javascript" src="cordova.js"></script>
+		<script src="js/jquery-1.11.1.min.js"></script>   
+		<script src="js/bootstrap.min.js"></script>   
+		<script src="js/angular.min.js" ></script>
+		<script src="js/angular-route.min.js" ></script>
+		<script src="js/slideout.min.js"></script>   
+		<script src="js/index.js"></script>
+		<script src="js/routes.js"></script>   
+        
+    </body>
+</html>
+ 
