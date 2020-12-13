@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "cordova-browser": "^6.0.0",
-    "cordova-electron": "^1.1.1",
+    "cordova-electron": "^2.0.0",
     "cordova-ios": "^6.1.1",
     "cordova-osx": "^6.0.0"
   }
