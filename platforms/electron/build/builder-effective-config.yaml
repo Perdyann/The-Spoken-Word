@@ -1,0 +1,19 @@
+directories:
+  output: /Users/perditaokeke/Documents/The-Spoken-Word/platforms/electron/build
+  buildResources: /Users/perditaokeke/Documents/The-Spoken-Word/platforms/electron/build-res
+  app: /Users/perditaokeke/Documents/The-Spoken-Word/platforms/electron/www
+appId: com.thespokenword.thespokenword
+productName: The Spoken Word
+electronVersion: 4.0.1
+electronDownload:
+  version: 4.0.1
+mac:
+  type: distribution
+  icon: installer.png
+  target:
+    - target: dmg
+      arch:
+        - x64
+    - target: zip
+      arch:
+        - x64

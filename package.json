@@ -10,21 +10,22 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
-    "cordova-android": "^6.3.0",
-    "cordova-plugin-whitelist": "^1.3.3"
+    "cordova-plugin-whitelist": "^1.3.3",
+    "cordova": "^10.0.0"
   },
   "cordova": {
     "plugins": {
       "cordova-plugin-whitelist": {}
     },
     "platforms": [
-      "android",
-      "ios",
       "osx",
-      "electron"
+      "electron",
+      "android",
+      "ios"
     ]
   },
   "devDependencies": {
+    "cordova-android": "^9.0.0",
     "cordova-browser": "^6.0.0",
     "cordova-electron": "^2.0.0",
     "cordova-ios": "^6.1.1",
