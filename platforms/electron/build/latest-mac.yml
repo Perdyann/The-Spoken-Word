@@ -1,0 +1,12 @@
+version: 1.0.1
+files:
+  - url: The-Spoken-Word-1.0.1-mac.zip
+    sha512: yyaJKxJVHF1tBYBR+FP2lDpLqI9nbIs8EOQVs1Uj19r+l+meUjIsL8CRx3XZSbfc0LDLIeS9Sg+dk9KcJWo8kQ==
+    size: 62079730
+    blockMapSize: 65365
+  - url: The-Spoken-Word-1.0.1.dmg
+    sha512: +Pg6Ia4+lbY8VBCzYJyOaJs2EvMTUbXOqaD4MFZYvz5j/A0kziD+j26sCmq5cQf7Z6NglqEkaQqVwBXYWaGIUg==
+    size: 63944406
+path: The-Spoken-Word-1.0.1-mac.zip
+sha512: yyaJKxJVHF1tBYBR+FP2lDpLqI9nbIs8EOQVs1Uj19r+l+meUjIsL8CRx3XZSbfc0LDLIeS9Sg+dk9KcJWo8kQ==
+releaseDate: '2020-12-14T03:35:32.606Z'

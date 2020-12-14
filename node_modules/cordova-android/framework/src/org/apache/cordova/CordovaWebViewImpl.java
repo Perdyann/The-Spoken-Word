@@ -18,6 +18,7 @@
 */
 package org.apache.cordova;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -91,6 +92,7 @@ public class CordovaWebViewImpl implements CordovaWebView {
         init(cordova, new ArrayList<PluginEntry>(), new CordovaPreferences());
     }
 
+    @SuppressLint("Assert")
     @Override
     public void init(CordovaInterface cordova, List<PluginEntry> pluginEntries, CordovaPreferences preferences) {
         if (this.cordova != null) {
@@ -214,8 +216,10 @@ public class CordovaWebViewImpl implements CordovaWebView {
                 // TODO: What about params?
                 // Load new URL
                 loadUrlIntoView(url, true);
+                return;
             } else {
                 LOG.w(TAG, "showWebPage: Refusing to load URL into webview since it is not in the <allow-navigation> whitelist. URL=" + url);
+                return;
             }
         }
         if (!pluginManager.shouldOpenExternalUrl(url)) {
@@ -240,6 +244,21 @@ public class CordovaWebViewImpl implements CordovaWebView {
         }
     }
 
+    private static class WrapperView extends FrameLayout {
+
+        private final CordovaWebViewEngine engine;
+
+        public WrapperView(Context context, CordovaWebViewEngine engine) {
+            super(context);
+            this.engine = engine;
+        }
+
+        @Override
+        public boolean dispatchKeyEvent(KeyEvent event) {
+            return engine.getView().dispatchKeyEvent(event);
+        }
+    }
+
     @Override
     @Deprecated
     public void showCustomView(View view, WebChromeClient.CustomViewCallback callback) {
@@ -251,13 +270,16 @@ public class CordovaWebViewImpl implements CordovaWebView {
             return;
         }
 
+        WrapperView wrapperView = new WrapperView(getContext(), engine);
+        wrapperView.addView(view);
+
         // Store the view and its callback for later (to kill it properly)
-        mCustomView = view;
+        mCustomView = wrapperView;
         mCustomViewCallback = callback;
 
         // Add the custom view to its container.
         ViewGroup parent = (ViewGroup) engine.getView().getParent();
-        parent.addView(view, new FrameLayout.LayoutParams(
+        parent.addView(wrapperView, new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 Gravity.CENTER));

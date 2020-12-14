@@ -8,7 +8,7 @@
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.example.thespokenword"
+      "PACKAGE_NAME": "com.thespokenword.thespokenword"
     }
   },
   "dependent_plugins": {}
