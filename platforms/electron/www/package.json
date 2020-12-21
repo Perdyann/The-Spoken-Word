@@ -5,7 +5,8 @@
   "version": "1.0.1",
   "description": "The Spoken Word Ebook App.",
   "dependencies": {
-    "cordova-plugin-whitelist": "^1.3.3"
+    "cordova-plugin-whitelist": "^1.3.3",
+    "cordova": "^10.0.0"
   },
   "homepage": "http://smartperdita.com",
   "license": "Apache-2.0",
